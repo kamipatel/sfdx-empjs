@@ -16,6 +16,6 @@ sfdx force:auth:web:login --setalias MyScratchOrg --instanceurl http://vkommaraj
 Production/Sandox  sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername  
 
 # Deploying new changes
-Deploy changes using  
+Deploy changes from src/main directory using    
 sfdx force:source:deploy --json --loglevel fatal --sourcepath default
 
