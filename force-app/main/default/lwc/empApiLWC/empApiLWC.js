@@ -33,10 +33,11 @@ export default class EmpApiLWC extends LightningElement {
 
     // handles unsubscribe button click
     handleUnsubscribe() {
+        this.toggleSubscribeButton(false);
+
         // invoke unsubscribe method of empApi
         unsubscribe(this.subscription, response => {
             this.unsubscribeResponse = response;
-            this.toggleSubscribeButton(false);
             // response is true for successful unsubscribe
         });
     }
