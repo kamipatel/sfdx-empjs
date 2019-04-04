@@ -54,10 +54,11 @@
         }));
     },
             
-            setDebugFlag : function(component, event, helper) {
+    setDebugFlag : function(component, event, helper) {
         var empApi = component.find("empApi"); 
         empApi.setDebugFlag("true");
     },
+    
     isEnabled : function(component, event, helper) {
         var empApi = component.find("empApi");
         
