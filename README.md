@@ -7,7 +7,7 @@
   
   
 # Steps
-1. **Create a new Developer Hub**  
+1. **Create a new Sratch Org**  
 `sfdx alt:org:create --type developerhub --companyname MyLocalDevHub --email vkommaraju@salesforce.com --username vk@dev.com --mydomain MyDomain --password test1234`  
   
 2. **Create OAuth Consumer for org to enable Salesforce Developer Experience**  
@@ -27,8 +27,8 @@
 
 # References   
 **SFDX Local Setup Instructions Doc**  
-https://docs.google.com/document/d/1vSVdxnTJjqyUCEBR8gz-ncfPgKmnvV6MbS8ZFI83GiE/edit#heading=h.4d4vzeyu3ey1  
+[instructions] (https://docs.google.com/document/d/1vSVdxnTJjqyUCEBR8gz-ncfPgKmnvV6MbS8ZFI83GiE/edit#heading=h.4d4vzeyu3ey1)  
 **LWC Trailhead**  
-https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components  
+[trailhead](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components)  
 **LWC Recipes**  
-https://github.com/trailheadapps/lwc-recipes/
+[recipes](https://github.com/trailheadapps/lwc-recipes/)
