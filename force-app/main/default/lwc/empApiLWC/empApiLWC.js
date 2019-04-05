@@ -22,15 +22,20 @@ export default class EmpApiLWC extends LightningElement {
 
     // handles subscribe button click
     handleSubscribe() {
+        // register error listener
+        this.registerErrorListener();
+
         // callback invoked whenever a new event message is received
         const messageCallback = function(response) {
             this.messageReceived = response;
+            console.log('Received message on topic ', JSON.stringify(response));
             // response contains the payload of the new message received
         };
 
         // invoke subscribe method of empApi. Pass reference to messageCallback
         subscribe(this.channelName, -1, messageCallback).then(response => {
             // response contains the subscription information on successful subscribe call
+            console.log('Subscribed to topic. Subscribe Response: ', JSON.stringify(response));
             this.subscription = response;
             this.toggleSubscribeButton(true);
         });
@@ -42,6 +47,7 @@ export default class EmpApiLWC extends LightningElement {
 
         // invoke unsubscribe method of empApi
         unsubscribe(this.subscription, response => {
+            console.log('Unsubscribed from topic. Response: ', JSON.stringify(response));
             this.unsubscribeResponse = response;
             // response is true for successful unsubscribe
         });
@@ -55,6 +61,7 @@ export default class EmpApiLWC extends LightningElement {
     registerErrorListener() {
         // invoke onError empApi method
         onError(error => {
+            console.log('Received error from server ', JSON.stringify(error));
             this.errorReceived = error;
             // error contains the server-side error
         });
@@ -66,12 +73,15 @@ export default class EmpApiLWC extends LightningElement {
         this.debugStyle = this.debugFlag === true ? "destructive" : "success";
         this.debugLabel = this.debugFlag === true ? "Disable Debug" : "Enable Debug";
         
-        setDebugFlag({flag: this.debugFlag});
+        setDebugFlag({flag: this.debugFlag}).then(response => {
+            console.log('Set debug response: ', JSON.stringify(response));
+        });
     }
 
     handleEmpEnabled() {
         // invoke isEmpEnabled empApi method
         isEmpEnabled().then(response => {
+            console.log('Is Emp enabled response: ', JSON.stringify(response));
             this.empApiEnabled = response;
         });
     }
