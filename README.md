@@ -11,9 +11,13 @@ sfdx alt:org:create --type developerhub --companyname MyLocalDevHub --email vkom
 2. Create OAuth Consumer for org to enable Salesforce Developer Experience  
 sfdx alt:sfdx:enable --orgid 00Dxx00000070yd  
 3. Authorize the new org with the consumer  
-Localost  Enter 1384510088588713504 when prompted for Oauth client secret  
+  
+On Localhost Enter 1384510088588713504 when prompted for Oauth client secret  
 sfdx force:auth:web:login --setalias MyScratchOrg --instanceurl http://vkommaraju-wsl1.internal.salesforce.com:6109 --setdefaultusername -i SalesforceDevelopmentExperience  
-Production/Sandox  sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername  
+  
+  
+Production/Sandox  
+sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername  
 
 # Deploying new changes
 Deploy changes from src/main directory using    
