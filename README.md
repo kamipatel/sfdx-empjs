@@ -6,27 +6,27 @@
   
   
 # Steps
-1. Create a new Developer Hub  
+1. **Create a new Developer Hub**  
 sfdx alt:org:create --type developerhub --companyname MyLocalDevHub --email vkommaraju@salesforce.com --username vk@dev.com --mydomain MyDomain --password test1234  
-2. Create OAuth Consumer for org to enable Salesforce Developer Experience  
+2. **Create OAuth Consumer for org to enable Salesforce Developer Experience**  
 sfdx alt:sfdx:enable --orgid 00Dxx00000070yd  
 3. Authorize the new org with the consumer  
   
-On Localhost Enter 1384510088588713504 when prompted for Oauth client secret  
+*On Localhost Enter **1384510088588713504** when prompted for Oauth client secret*  
 sfdx force:auth:web:login --setalias MyScratchOrg --instanceurl http://vkommaraju-wsl1.internal.salesforce.com:6109 --setdefaultusername -i SalesforceDevelopmentExperience  
   
   
-Production/Sandox  
+*Production/Sandox*  
 sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername  
 
 # Deploying new changes
-Deploy changes from src/main directory using    
+**Deploy changes from src/main directory using**    
 sfdx force:source:deploy --json --loglevel fatal --sourcepath default
 
 # References   
-SFDX Local Setup  
+**SFDX Local Setup Instructions Doc**  
 https://docs.google.com/document/d/1vSVdxnTJjqyUCEBR8gz-ncfPgKmnvV6MbS8ZFI83GiE/edit#heading=h.4d4vzeyu3ey1  
-LWC Trailhead  
+**LWC Trailhead**  
 https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components  
-LWC Recipes  
+**LWC Recipes**  
 https://github.com/trailheadapps/lwc-recipes/
