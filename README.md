@@ -19,7 +19,10 @@ Production/Sandox  sfdx force:auth:web:login --setalias MyScratchOrg --setdefaul
 Deploy changes from src/main directory using    
 sfdx force:source:deploy --json --loglevel fatal --sourcepath default
 
-# References
+# References   
+SFDX Local Setup  
 https://docs.google.com/document/d/1vSVdxnTJjqyUCEBR8gz-ncfPgKmnvV6MbS8ZFI83GiE/edit#heading=h.4d4vzeyu3ey1  
+LWC Trailhead  
 https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components  
+LWC Recipes  
 https://github.com/trailheadapps/lwc-recipes/
