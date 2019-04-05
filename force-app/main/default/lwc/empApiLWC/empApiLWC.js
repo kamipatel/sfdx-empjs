@@ -1,10 +1,15 @@
 import { LightningElement, track } from 'lwc';
-import { subscribe, unsubscribe, onError } from 'lightning/empApi';
+import { subscribe, unsubscribe, onError, setDebugFlag, isEmpEnabled } from 'lightning/empApi';
 
 export default class EmpApiLWC extends LightningElement {
     @track channelName = '/event/Test__e';
     @track isSubscribeDisabled = false;
     @track isUnsubscribeDisabled = !this.isSubscribeDisabled;
+    @track debugFlag = false;
+    @track debugStyle = "success";
+    @track debugLabel = "Enable Debug";
+    @track empApiEnabled = "click button to check";
+    
     subscription = {};
     messageReceived = {};
     unsubscribeResponse = {};
@@ -52,6 +57,22 @@ export default class EmpApiLWC extends LightningElement {
         onError(error => {
             this.errorReceived = error;
             // error contains the server-side error
+        });
+    }
+
+    handleDebugFlag() {
+        // invoke setDebugFlag empApi method
+        this.debugFlag = !this.debugFlag;
+        this.debugStyle = this.debugFlag === true ? "destructive" : "success";
+        this.debugLabel = this.debugFlag === true ? "Disable Debug" : "Enable Debug";
+        
+        setDebugFlag({flag: this.debugFlag});
+    }
+
+    handleEmpEnabled() {
+        // invoke isEmpEnabled empApi method
+        isEmpEnabled().then(response => {
+            this.empApiEnabled = response;
         });
     }
 }
