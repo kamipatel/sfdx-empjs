@@ -26,9 +26,6 @@
 `sfdx force:source:deploy --json --loglevel fatal --sourcepath default`
 
 # References   
-**SFDX Local Setup Instructions Doc**  
-[instructions] (https://docs.google.com/document/d/1vSVdxnTJjqyUCEBR8gz-ncfPgKmnvV6MbS8ZFI83GiE/edit#heading=h.4d4vzeyu3ey1)  
-**LWC Trailhead**  
-[trailhead](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components)  
-**LWC Recipes**  
-[recipes](https://github.com/trailheadapps/lwc-recipes/)
+[SFDX Local Setup Instructions Doc](https://docs.google.com/document/d/1vSVdxnTJjqyUCEBR8gz-ncfPgKmnvV6MbS8ZFI83GiE/edit#heading=h.4d4vzeyu3ey1)  
+[LWC Trailhead](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components?trail_id=build-lightning-web-components)  
+[LWC Recipes](https://github.com/trailheadapps/lwc-recipes/)
