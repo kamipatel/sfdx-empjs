@@ -3,7 +3,7 @@
 2. Download and install SFX CLI from https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm  
 3. In, Visual Studio install the 'Salesforce Extension Pack' extension  
 4. Add "Replication" and "AntiPhishingSystem" configs to your dev.xml  (Optional)
-5. Update instanceUrl in sfdx-project.json to point to your local app server  
+5. Update sfdcLoginUrl in sfdx-project.json to point to your local app server  
   
   
 # Steps
@@ -16,7 +16,7 @@
 3. **Authorize the new org with the consumer**  
   
 *On Localhost Enter **1384510088588713504** when prompted for Oauth client secret*  
-`sfdx force:auth:web:login --setalias MyScratchOrg --instanceurl http://vkommaraju-wsl1.internal.salesforce.com:6109 --setdefaultusername -i SalesforceDevelopmentExperience`  
+`sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername -i SalesforceDevelopmentExperience`  
   
 *Production/Sandox*  
 `sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername`  
