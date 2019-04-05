@@ -3,7 +3,7 @@
 2. Download and install SFX CLI from https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm  
 3. In, Visual Studio install the 'Salesforce Extension Pack' extension  
 4. Add "Replication" and "AntiPhishingSystem" configs to your dev.xml  (Optional)
-5. Update sfdcLoginUrl in sfdx-project.json to point to your local app server  
+5. Update sfdcLoginUrl in [sfdx-project.json](https://github.com/vikram-kommaraju/sfdx-empjs/blob/master/sfdx-project.json) to point to your local app server  
   
   
 # Steps
