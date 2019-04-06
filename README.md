@@ -17,7 +17,6 @@
 *Localhost*  
 *(Enter 1384510088588713504 when prompted for Oauth client secret)*  
 `sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername -i SalesforceDevelopmentExperience`  
-  
 *Production/Sandox*  
 `sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername`  
 
