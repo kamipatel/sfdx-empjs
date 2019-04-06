@@ -15,7 +15,8 @@
   
 3. **Authorize the new org with the consumer**  
   
-*On Localhost Enter *1384510088588713504* when prompted for Oauth client secret*  
+*Localhost Enter*  
+*Enter 1384510088588713504 when prompted for Oauth client secret*  
 `sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername -i SalesforceDevelopmentExperience`  
   
 *Production/Sandox*  
