@@ -14,14 +14,11 @@
 `sfdx alt:sfdx:enable --orgid 00Dxx00000070yd`  
   
 3. **Authorize the new org with the consumer**  
-  
 *Localhost*  
-***
 *(Enter 1384510088588713504 when prompted for Oauth client secret)*  
 `sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername -i SalesforceDevelopmentExperience`  
   
 *Production/Sandox*  
-***
 `sfdx force:auth:web:login --setalias MyScratchOrg --setdefaultusername`  
 
 # Deploying new changes
